@@ -10,8 +10,13 @@ function deletarCurso(request, response) {
     response.send("Função responsável por deletar um curso")
 }
 
+function atualizarCurso(request, response) {
+    response.send("Função responsável por atualizar um curso")
+}
+
 module.exports = {
     listarCursos,
     criarCurso,
-    deletarCurso
+    deletarCurso,
+    atualizarCurso
 }
