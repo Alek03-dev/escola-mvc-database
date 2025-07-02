@@ -1,5 +1,12 @@
-function listarProfessores(request, response) {
-    response.send("Função responsavel pela listagem")
+// Importar o model de cursos
+const professoresModel = require("../models/curso.model")
+
+async function listarProfessores(request, response) {
+    
+    // Chamar a função do listarTodosProfessores do model
+    const professores = await professorresModel.listarTodosProfessores()
+
+    response.json(professores)
 }
 
 function criarProfessor(request, response) {
